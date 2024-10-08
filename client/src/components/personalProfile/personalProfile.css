@@ -1,0 +1,92 @@
+/* personal-profile.css */
+
+/* General Styles for the Form */
+.personal-profile form {
+    max-width: 1000px; /* הרחבת רוחב הטופס */
+    margin: 0 auto;
+    padding: 30px; /* הגדלת הפדינג */
+    background-color: #ffffff;
+    border-radius: 12px; /* הגדלת העיקולים של המסגרת */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* הגדלת הצל של המסגרת */
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* מאפשר להניח את הכפתורים אחד אחרי השני */
+    align-items: center; /* מרכז את כל התוכן */
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.personal-profile form div {
+    margin-bottom: 20px; /* הגדלת המרווח בין השדות */
+    width: 100%; /* מבטיח שהשדות יתפסו את כל רוחב הטופס */
+}
+
+.personal-profile label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.personal-profile input[type="text"],
+.personal-profile input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-align: center; /* מרכז את התוכן בתוך השדה */
+}
+
+.personal-profile input[readonly] {
+    background-color: #f9f9f9;
+    cursor: not-allowed;
+}
+
+/* Center the buttons container */
+.personal-profile .button-container {
+    display: flex;
+    flex-direction: row; /* הכפתורים יהיו בשורה */
+    justify-content: center; /* מרכז את הכפתורים בתוך הקונטיינר */
+    width: 100%; /* מבטיח שהכפתורים יתפסו את כל רוחב הקונטיינר */
+    margin-top: 20px; /* הוספת מרווח עליון */
+}
+
+.personal-profile button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* הגדלת הפדינג בכפתורים */
+    border-radius: 6px; /* הגדלת העיקולים של הכפתורים */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px; /* הוספת מרווח בין הכפתורים */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* מרכז את התוכן בתוך הכפתור */
+}
+
+.personal-profile button:hover {
+    background-color: #2980b9;
+}
+
+.personal-profile button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for icons inside buttons */
+.personal-profile button svg {
+    margin-right: 5px;
+}
+
+.personal-profile button:last-child {
+    background-color: #e74c3c;
+}
+
+.personal-profile button:last-child:hover {
+    background-color: #c0392b;
+}

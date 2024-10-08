@@ -1,0 +1,99 @@
+.nav-bar {
+  width: 100%;
+  background-color: #ecebe6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: rtl;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-right: 20%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  padding: 10px;
+}
+
+.logo img {
+  width: 140px;
+  height: 80px;
+}
+
+.nav-profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px; /* Adjust as needed */
+  padding-right: 20px; /* Adjust as needed */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #213547;
+  text-decoration: none;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #6096bf;
+}
+
+.user-profile {
+  position: relative;
+}
+
+.profile-icon {
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.user-profile span {
+  cursor: pointer;
+}
+
+.profile-options {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 5px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.user-profile:hover .profile-options {
+  display: block;
+}
+
+.profile-options li {
+  padding: 10px;
+}
+
+.profile-options a {
+  color: #213547;
+  text-decoration: none;
+}
+
+.profile-options a:hover {
+  text-decoration: underline;
+  color: #6096bf;
+}

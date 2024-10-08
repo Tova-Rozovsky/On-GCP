@@ -1,0 +1,67 @@
+CREATE TABLE passwords (
+    userId int PRIMARY KEY,
+    password varchar(50)
+);
+CREATE TABLE users (
+    ID int AUTO_INCREMENT PRIMARY KEY,
+    userId int,
+    userName varchar(20),
+    address varchar(30),
+    region varchar(10),
+    email varchar(30),
+    phoneNumber varchar(20)
+);
+
+CREATE TABLE proposalrequests (
+    requestId int AUTO_INCREMENT PRIMARY KEY,
+    requestType enum('ארוחה','בייביסיטר'),
+    requestStatus enum('בוצע','המתנה'),
+    userId int,
+    volunteerId int
+);
+
+
+CREATE TABLE meals (
+    mealId int AUTO_INCREMENT PRIMARY KEY,
+    requestId int,
+    amountMeals int,
+    mealType varchar(255)
+);
+CREATE TABLE db_fp.babysitter (
+    babysitterId INT AUTO_INCREMENT PRIMARY KEY,
+    requestId INT,
+    numberOfChildren INT NOT NULL,
+    babysittingHours INT NOT NULL,
+    FOREIGN KEY (requestId) REFERENCES db_fp.proposalrequests(requestId)
+);
+
+
+CREATE TABLE db_fp.cleaning (
+    cleaningId INT AUTO_INCREMENT PRIMARY KEY,
+    requestId INT,
+    cleaningHours INT NOT NULL,
+    cleaningDay VARCHAR(50) NOT NULL,
+    FOREIGN KEY (requestId) REFERENCES db_fp.proposalrequests(requestId)
+);
+
+
+CREATE TABLE db_fp.shopping (
+    shoppingId INT AUTO_INCREMENT PRIMARY KEY,
+    requestId INT,
+    shoppingList TEXT NOT NULL,
+    FOREIGN KEY (requestId) REFERENCES db_fp.proposalrequests(requestId)
+);
+
+
+CREATE TABLE db_fp.support (
+    supportId INT AUTO_INCREMENT PRIMARY KEY,
+    requestId INT,
+    supportCall TEXT NOT NULL,
+    FOREIGN KEY (requestId) REFERENCES db_fp.proposalrequests(requestId)
+);
+
+ALTER TABLE db_fp.proposalrequests
+MODIFY requestType ENUM('ארוחה', 'בייביסיטר', 'נקיון', 'קניות', 'אוזן קשבת');
+
+ALTER TABLE db_fp.proposalrequests
+ADD COLUMN requestDate DATE;

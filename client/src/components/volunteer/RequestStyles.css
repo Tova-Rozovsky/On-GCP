@@ -1,0 +1,19 @@
+.request p strong {
+    color: #000;
+} 
+
+.request {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 18px;
+    background-color: #f9f9f9;
+    width: 400px; 
+    /*display: flex;*/
+    justify-content: center; 
+    align-items: center;
+}
+
+.request h3 {
+    margin-top: 0;
+}
